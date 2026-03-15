@@ -79,7 +79,7 @@ A Lambda function retrieves weekly NFL player statistics and writes them to the 
 - Store data in the raw S3 layer  
 
 Example output location:
-
+s3://nfl-startsit-ashwin/raw/season=2024/week=03/source=nflverse/
 
 ---
 
@@ -154,7 +154,15 @@ AND targets - prev_targets >= 3
 ORDER BY target_change DESC;
 ```
 #### Data Completeness Validation
-
+```sql
+SELECT
+    season,
+    week,
+    COUNT(*) AS total_rows
+FROM ff_analytics.player_week_stats
+GROUP BY season, week
+ORDER BY season, week;
+```
 Checks for missing values and row counts.
 
 # Key Design Principles

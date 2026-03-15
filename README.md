@@ -18,7 +18,7 @@ The pipeline follows a layered data lake architecture:
 
 
 This design separates **storage (S3)** from **compute (Athena)** and allows serverless analytics without provisioning databases or infrastructure.
-![S3 Data Lake Layout](images/S3 File Tree.png)
+![S3 Data Lake Layout](images/S3-File-Tree.png)
 ---
 
 ## Data Lake Structure

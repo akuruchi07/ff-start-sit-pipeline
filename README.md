@@ -1,4 +1,5 @@
 # Serverless Sports Analytics Data Pipeline (AWS)
+Production-style serverless data pipeline for ingesting, transforming, and analyzing weekly NFL player performance data using AWS.
 
 ## Overview
 
@@ -104,7 +105,7 @@ A second Lambda function transforms the raw dataset into a **clean curated datas
 - Conversion to Parquet format  
 
 Curated output example:
-s3://nfl-startsit-ashwin/curated/table=player_week/season=2024/week=03/
+`s3://nfl-startsit-ashwin/curated/table=player_week/season=2024/week=03/`
 
 ---
 
@@ -113,7 +114,7 @@ s3://nfl-startsit-ashwin/curated/table=player_week/season=2024/week=03/
 The curated datasets are registered in the **AWS Glue Data Catalog**, which acts as the metadata layer for the data lake.
 
 Example table:
-ff_analytics.player_week_stats
+`ff_analytics.player_week_stats`
 
 
 The table references the curated S3 location and allows Athena to query the data directly.
@@ -175,7 +176,7 @@ ORDER BY season, week;
 ```
 
 
-# Key Design Principles
+## Key Design Principles
 ## Serverless Architecture
 All compute components are serverless:
 
@@ -198,7 +199,7 @@ The pipeline separates:
 
 This makes it easier to reprocess data and maintain reliable analytics workflows.
 
-# Future Improvements
+## Future Improvements
 Planned enhancements include:
 
 * Feature engineering layer for predictive modeling
@@ -207,7 +208,7 @@ Planned enhancements include:
 * Backtesting framework for evaluating model performance
 * Dashboard for visualizing weekly player projections
 
-# Project Motivation
+## Project Motivation
 This project was built to gain hands-on experience designing and implementing cloud-based data pipelines using AWS services commonly used in production analytics systems.
 
 It demonstrates:
@@ -218,7 +219,7 @@ It demonstrates:
 * Serverless analytics
 * SQL-based exploration of curated datasets
 
-# Author
-## Ashwin Kuruchi
-
+## Author
+**Ashwin Kuruchi**
+B.S. Computational Modeling & Data Analytics
 

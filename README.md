@@ -8,6 +8,15 @@ The system collects player statistics, stores raw data in an S3 data lake, trans
 
 The goal of this project is to simulate a production-style **data lake architecture** where storage, transformation, and query layers are separated to enable scalable and cost-efficient analytics.
 
+## Key Skills Demonstrated
+
+- Serverless data pipelines
+- AWS Lambda ETL workflows
+- Data lake architecture
+- Parquet optimization for analytics
+- SQL analytics using Amazon Athena
+- Metadata management with AWS Glue
+
 ---
 
 ## Architecture
@@ -154,6 +163,7 @@ AND targets - prev_targets >= 3
 ORDER BY target_change DESC;
 ```
 #### Data Completeness Validation
+Checks for missing values and row counts.
 ```sql
 SELECT
     season,
@@ -163,7 +173,7 @@ FROM ff_analytics.player_week_stats
 GROUP BY season, week
 ORDER BY season, week;
 ```
-Checks for missing values and row counts.
+
 
 # Key Design Principles
 ## Serverless Architecture

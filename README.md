@@ -13,32 +13,7 @@ The goal of this project is to simulate a production-style **data lake architect
 ## Architecture
 
 The pipeline follows a layered data lake architecture:
-
-Data Source (NFL statistics)
-
-↓
-
-AWS Lambda (Ingestion)
-
-↓
-
-S3 Raw Data Layer
-
-↓
-
-AWS Lambda (Curation / Transformation)
-
-↓
-
-S3 Curated Layer (Parquet)
-
-↓
-
-AWS Glue Data Catalog
-
-↓
-
-Amazon Athena (SQL Analytics)
+![Pipeline Architecture](images/architecture.png)
 
 
 

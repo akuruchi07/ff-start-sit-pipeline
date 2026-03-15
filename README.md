@@ -29,6 +29,7 @@ AWS Glue Data Catalog
 Amazon Athena (SQL Analytics)
 
 
+
 This design separates **storage (S3)** from **compute (Athena)** and allows serverless analytics without provisioning databases or infrastructure.
 
 ---

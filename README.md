@@ -15,8 +15,10 @@ The goal of this project is to simulate a production-style **data lake architect
 The pipeline follows a layered data lake architecture:
 
 Data Source (NFL statistics)
+
 ↓
 AWS Lambda (Ingestion)
+
 ↓
 S3 Raw Data Layer
 ↓
